@@ -7,9 +7,6 @@
             "label": "Build and Import Module",
             "command": "pwsh",
             "type": "shell",
-            "windows": {
-                "command": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
-            },
             "args": [
                 "-command",
                 "Import-Module ${workspaceFolder}\\tools\\build.psm1;",
@@ -32,9 +29,6 @@
         {
             "label": "Install Dependencies",
             "command": "pwsh",
-            "windows": {
-                "command": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
-            },
             "args": [
                 "-command",
                 "Import-Module ${workspaceFolder}\\tools\\build.psm1;",
@@ -53,9 +47,6 @@
         {
             "label": "Remove Development Module",
             "command": "pwsh",
-            "windows": {
-                "command": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
-            },
             "args": [
                 "-command",
                 "Import-Module ${workspaceFolder}\\tools\\build.psm1;",
@@ -74,9 +65,6 @@
         {
             "label": "Run Full Test Suite",
             "command": "pwsh",
-            "windows": {
-                "command": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
-            },
             "args": [
                 "-command",
                 "Import-Module ${workspaceFolder}\\tools\\build.psm1;",
