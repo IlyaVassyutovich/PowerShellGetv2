@@ -56,6 +56,11 @@ FunctionsToExport = @(
             Prerelease   = 'beta'
             ProjectUri   = 'https://go.microsoft.com/fwlink/?LinkId=828955'
             LicenseUri   = 'https://go.microsoft.com/fwlink/?LinkId=829061'
+            RepositoryMetadata = @{
+              Type = "git"
+              Uri = "https://github.com/IlyaVassyutovich/PowerShellGetv2"
+              Branch = "main"
+            }
             ReleaseNotes = @'
 ### 2.3.0
 - Implement repository metadata handling
