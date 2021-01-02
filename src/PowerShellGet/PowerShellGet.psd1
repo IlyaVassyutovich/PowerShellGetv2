@@ -8,33 +8,33 @@
     Description       = 'PowerShell module with commands for discovering, installing, updating and publishing the PowerShell artifacts like Modules, DSC Resources, Role Capabilities and Scripts.'
     PowerShellVersion = '3.0'
     FormatsToProcess  = 'PSGet.Format.ps1xml'
-    FunctionsToExport = @(
-        'Find-Command',
-        'Find-DSCResource',
-        'Find-Module',
-        'Find-RoleCapability',
-        'Find-Script',
-        'Get-CredsFromCredentialProvider',
-        'Get-InstalledModule',
-        'Get-InstalledScript',
-        'Get-PSRepository',
-        'Install-Module',
-        'Install-Script',
-        'New-ScriptFileInfo',
-        'Publish-Module',
-        'Publish-Script',
-        'Register-PSRepository',
-        'Save-Module',
-        'Save-Script',
-        'Set-PSRepository',
-        'Test-ScriptFileInfo',
-        'Uninstall-Module',
-        'Uninstall-Script',
-        'Unregister-PSRepository',
-        'Update-Module',
-        'Update-ModuleManifest',
-        'Update-Script',
-        'Update-ScriptFileInfo')
+FunctionsToExport = @(
+	'Find-Command',
+	'Find-DSCResource',
+	'Find-Module',
+	'Find-RoleCapability',
+	'Find-Script',
+	'Get-CredsFromCredentialProvider',
+	'Get-InstalledModule',
+	'Get-InstalledScript',
+	'Get-PSRepository',
+	'Install-Module',
+	'Install-Script',
+	'New-ScriptFileInfo',
+	'Publish-Module',
+	'Publish-Script',
+	'Register-PSRepository',
+	'Save-Module',
+	'Save-Script',
+	'Set-PSRepository',
+	'Test-ScriptFileInfo',
+	'Uninstall-Module',
+	'Uninstall-Script',
+	'Unregister-PSRepository',
+	'Update-Module',
+	'Update-ModuleManifest',
+	'Update-Script',
+	'Update-ScriptFileInfo')
 
     VariablesToExport = 'PSGetPath'
     AliasesToExport   = @('inmo', 'fimo', 'upmo', 'pumo')
@@ -285,3 +285,4 @@ https://github.com/PowerShell/PowerShellGet/blob/master/CHANGELOG.md
 
     HelpInfoURI       = 'http://go.microsoft.com/fwlink/?linkid=855963'
 }
+
