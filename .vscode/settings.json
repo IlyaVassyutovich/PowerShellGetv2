@@ -1,7 +1,7 @@
 {
     "editor.renderWhitespace": "boundary",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
     "editor.rulers": [
         116
     ],
