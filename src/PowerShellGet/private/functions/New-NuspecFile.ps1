@@ -38,6 +38,9 @@ function New-NuspecFile {
         [string]$ProjectUrl,
 
         [Parameter()]
+        [PSCustomObject]$RepositoryMetadata,
+
+        [Parameter()]
         [string]$IconUrl,
 
         [Parameter()]
@@ -91,6 +94,19 @@ function New-NuspecFile {
         $metaDataElement.AppendChild($element) | Out-Null
     }
 
+    if ($null -ne $RepositoryMetadata) {
+        $RepositoryElement = $xml.CreateElement("repository", $nameSpaceUri)
+        if ($null -ne $RepositoryMetadata.Type) {
+            $RepositoryElement.SetAttribute("type", $RepositoryMetadata.Type)
+        }
+        if ($null -ne $RepositoryMetadata.Uri) {
+            $RepositoryElement.SetAttribute("url", $RepositoryMetadata.Uri)
+        }
+        if ($null -ne $RepositoryMetadata.Branch) {
+            $RepositoryElement.SetAttribute("branch", $RepositoryMetadata.Branch)
+        }
+        $metaDataElement.AppendChild($RepositoryElement) | Out-Null
+    }
 
     if ($Dependencies) {
         $dependenciesElement = $xml.CreateElement("dependencies", $nameSpaceUri)

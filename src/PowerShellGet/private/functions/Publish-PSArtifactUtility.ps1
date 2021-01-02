@@ -84,6 +84,7 @@ function Publish-PSArtifactUtility {
     $Author = $null
     $CompanyName = $null
     $Copyright = $null
+    $ModuleRepositoryMetadata = $null
     $requireLicenseAcceptance = "false"
 
     if ($PSModuleInfo) {
@@ -117,6 +118,10 @@ function Publish-PSArtifactUtility {
 
             if ( -not $ProjectUri -and $PSModuleInfo.PrivateData.PSData["ProjectUri"]) {
                 $ProjectUri = $PSModuleInfo.PrivateData.PSData.ProjectUri
+            }
+
+            if ($null -ne $PSModuleInfo.PrivateData.PSData["RepositoryMetadata"]) {
+                $ModuleRepositoryMetadata = $PSModuleInfo.PrivateData.PSData.RepositoryMetadata
             }
 
             if ($PSModuleInfo.PrivateData.PSData["Prerelease"]) {
@@ -380,6 +385,7 @@ function Publish-PSArtifactUtility {
         Tags                     = $Tags
         LicenseUrl               = $LicenseUri
         ProjectUrl               = $ProjectUri
+        RepositoryMetadata       = $ModuleRepositoryMetadata
         IconUrl                  = $IconUri
         Dependencies             = $dependencies
     }
